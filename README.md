@@ -1,6 +1,8 @@
 Secrecy Mapper
 
-Evidence-driven entity resolution and structural network analysis.
+«Evidence-driven entity resolution and structural network analysis.»
+
+Status: Early development. The current implementation is focused on repository foundations and a tested analytical core using synthetic data. No production-readiness or real-world investigative accuracy is claimed.
 
 Secrecy Mapper is an analytical system designed to transform heterogeneous records into structured, traceable entity-relationship networks.
 
@@ -91,13 +93,13 @@ Preserve the records and processing information required to reproduce and review
 
 4. Analytical Standards
 
-Entity integrity
+Entity Integrity
 
 Every entity should have a stable identifier.
 
 Different records referring to potentially identical entities must not automatically be treated as the same entity.
 
-Relationship integrity
+Relationship Integrity
 
 Every relationship should have:
 
@@ -109,13 +111,13 @@ Every relationship should have:
 - A confidence assessment
 - An observation date
 
-Evidence provenance
+Evidence Provenance
 
 Analytical relationships must retain traceability to their supporting records.
 
 An inferred relationship must never be presented as a directly documented fact.
 
-Network interpretation
+Network Interpretation
 
 Metrics such as degree centrality, betweenness centrality and connectivity describe structural properties of a network.
 
@@ -270,7 +272,41 @@ No production-readiness or real-world investigative accuracy is claimed at this 
 
 ---
 
-10. Governing Principle
+10. Development
+
+The project is being developed incrementally using synthetic data.
+
+The initial analytical-core workflow is:
+
+Source Records
+      ↓
+Validation
+      ↓
+Entity Resolution
+      ↓
+Relationship Construction
+      ↓
+Graph Analysis
+      ↓
+Findings
+      ↓
+Evidence Manifest
+
+The analytical core must operate independently of Streamlit.
+
+Once the package structure is implemented, install the development dependencies using:
+
+python -m pip install -e ".[dev]"
+
+Run the automated tests using:
+
+pytest
+
+The analytical interface will be introduced only after the underlying analytical outputs have been tested and their reproducibility established.
+
+---
+
+11. Governing Principle
 
 A network is only as defensible as the evidence, identity decisions and assumptions used to construct it.
 

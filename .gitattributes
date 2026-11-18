@@ -1,0 +1,68 @@
+# ==========================================
+# DEFAULT TEXT HANDLING
+# ==========================================
+
+* text=auto
+
+# ==========================================
+# PYTHON
+# ==========================================
+
+*.py text eol=lf
+
+# ==========================================
+# CONFIGURATION
+# ==========================================
+
+*.toml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.env text eol=lf
+
+# ==========================================
+# DOCUMENTATION
+# ==========================================
+
+*.md text eol=lf
+*.txt text eol=lf
+*.rst text eol=lf
+
+# ==========================================
+# DATA AND EVIDENCE
+# ==========================================
+
+*.csv text eol=lf
+*.tsv text eol=lf
+*.sql text eol=lf
+*.log text eol=lf
+
+# ==========================================
+# SHELL SCRIPTS
+# ==========================================
+
+*.sh text eol=lf
+
+# ==========================================
+# WINDOWS SCRIPTS
+# ==========================================
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# ==========================================
+# BINARY FILES
+# ==========================================
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.sqlite binary
+*.sqlite3 binary
+*.db binary
+*.parquet binary
+*.zip binary

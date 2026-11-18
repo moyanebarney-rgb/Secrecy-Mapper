@@ -1,0 +1,6 @@
+relationship_id,source_id,target_id,relationship_type,evidence_id,confidence,observed_at
+R001,A,X,ownership,E001,high,2026-01-15
+R002,C,X,ownership,E002,medium,2026-02-10
+R003,X,B,control,E003,medium,2026-02-18
+R004,X,D,ownership,E004,low,2026-03-05
+R005,E,F,investment,E005,high,2026-03-12

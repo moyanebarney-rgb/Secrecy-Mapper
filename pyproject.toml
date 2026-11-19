@@ -14,11 +14,25 @@ dependencies = [
 "PyYAML>=6.0,<7.0",
 ]
 
+dependencies = [
+    "networkx",
+    "pandas",
+    "pydantic>=2.0",
+    "PyYAML",
+]
+
 [project.optional-dependencies]
 dev = [
 "pytest>=8.0,<10.0",
 "pytest-cov>=5.0,<8.0",
 "ruff>=0.5,<1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
 ]
 
 [tool.setuptools.packages.find]

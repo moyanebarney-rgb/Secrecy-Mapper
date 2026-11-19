@@ -2,7 +2,6 @@ from pathlib import Path
 
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 DATA_DIR = ROOT / "data" / "synthetic"
@@ -111,3 +110,4 @@ pd.DataFrame(relationships).to_csv(
 print("Synthetic dataset generated.")
 print(f"Entities: {len(entities)}")
 print(f"Relationships: {len(relationships)}")
+

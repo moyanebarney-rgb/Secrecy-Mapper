@@ -1,0 +1,8 @@
+entity_id,name,entity_type,in_degree,out_degree,total_degree,betweenness_centrality
+A,Alpha Holdings,organisation,0,1,1,0.0
+B,Beta Trading,organisation,1,0,1,0.0
+C,Central Investments,organisation,0,1,1,0.0
+D,Delta Services,organisation,1,0,1,0.0
+E,Echo Capital,organisation,0,1,1,0.0
+F,Foxtrot Logistics,organisation,1,0,1,0.0
+X,Intermediary Group,organisation,2,2,4,0.13333333333333333

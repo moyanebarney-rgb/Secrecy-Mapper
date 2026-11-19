@@ -1,36 +1,50 @@
 import json
+import shutil
 from pathlib import Path
 
 import pandas as pd
 
 from secrecy_mapper.pipeline import run_pipeline
 
+def test_pipeline_generates_expected_outputs(tmp_path: Path):
+source_root = Path(file).resolve().parents[1]
+project_root = tmp_path / "secrecy_mapper_test"
 
-def test_pipeline_generates_expected_outputs():
-    project_root = Path(__file__).resolve().parents[1]
+data_dir = project_root / "data" / "synthetic"
+data_dir.mkdir(parents=True)
 
-    run_pipeline(project_root)
+shutil.copy(
+    source_root / "data" / "synthetic" / "entities.csv",
+    data_dir / "entities.csv",
+)
 
-    output_dir = project_root / "evidence" / "network"
+shutil.copy(
+    source_root / "data" / "synthetic" / "relationships.csv",
+    data_dir / "relationships.csv",
+)
 
-    metrics_file = output_dir / "node_metrics.csv"
-    components_file = output_dir / "components.json"
+run_pipeline(project_root)
 
-    assert metrics_file.exists()
-    assert components_file.exists()
+output_dir = project_root / "evidence" / "network"
 
-    metrics = pd.read_csv(metrics_file)
+metrics_file = output_dir / "node_metrics.csv"
+components_file = output_dir / "components.json"
 
-    with open(components_file, encoding="utf-8") as file:
-        components = json.load(file)
+assert metrics_file.exists()
+assert components_file.exists()
 
-    assert len(metrics) == 7
-    assert len(components) == 2
+metrics = pd.read_csv(metrics_file)
 
-    intermediary = metrics.loc[
-        metrics["entity_id"] == "X"
-    ].iloc[0]
+with open(components_file, encoding="utf-8") as file:
+    components = json.load(file)
 
-    assert intermediary["in_degree"] == 2
-    assert intermediary["out_degree"] == 2
-    assert intermediary["total_degree"] == 4
+assert len(metrics) == 7
+assert len(components) == 2
+
+intermediary = metrics.loc[
+    metrics["entity_id"] == "X"
+].iloc[0]
+
+assert intermediary["in_degree"] == 2
+assert intermediary["out_degree"] == 2
+assert intermediary["total_degree"] == 4 

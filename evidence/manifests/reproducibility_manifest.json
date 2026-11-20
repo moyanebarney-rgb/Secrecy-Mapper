@@ -1,62 +1,62 @@
 {
-    "project": "Secrecy Mapper",
-    "manifest_version": "1.0",
-    "generated_at_utc": "2026-11-20T08:06:34.785162+00:00",
-    "repository": {
-        "tested_commit": "64eccd5fbd91e4232301e313dc0a39baf8bf8a6e",
-        "branch": "main",
-        "working_tree_clean_before_manifest": true
-    },
-    "environment": {
-        "python_version": "3.13.18",
-        "python_implementation": "CPython",
-        "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
-        "dependencies": {
-            "networkx": "3.7",
-            "pandas": "2.2.3",
-            "pydantic": "2.14.2",
-            "PyYAML": "6.0.3",
-            "pytest": "8.4.2",
-            "pytest-cov": "7.1.0",
-            "coverage": "7.17.3",
-            "ruff": "0.17.6"
-        }
-    },
-    "verification": {
-        "test_results": {
-            "total": 11,
-            "passed": 11,
-            "failed": 0,
-            "errors": 0,
-            "skipped": 0
-        },
-        "coverage_percent": 96.36,
-        "ruff": "passed",
-        "test_isolation": "passed",
-        "evidence_integrity": "passed",
-        "deterministic_generation": true
-    },
-    "hashes": {
-        "synthetic_datasets": {
-            "data/synthetic/entities.csv": "8c9406f589546af88f383170a2f8bcd46988d23725818aad37df71c1b25729af",
-            "data/synthetic/relationships.csv": "fbe4a8c9cec7f781bfcf045929c89ac9d1f48cccb602c3211db344cc2d4b78a0"
-        },
-        "analytical_evidence": {
-            "evidence/network/node_metrics.csv": "2cb8dabcc652c64e979b2af67d8791f2244d5652fa9e1a3f6450b98aba2c925d",
-            "evidence/network/components.json": "f3547af77710910cc4e342b7974466bf12acd370fffae7d15e4e06a494522c66"
-        },
-        "source_files": {
-            "scripts/generate.py": "d593b715ad736c683dfc696b0b5677f2f5857894d0c2d13c642e8a07e53484b4",
-            "src/secrecy_mapper/graph.py": "4980a7baf3b9c50b37d2377219baf16bf73fc7426c0072a61112104bbd86108e",
-            "src/secrecy_mapper/metrics.py": "368a5da0f5f85f21237260410928a9a103892297b205178326823e1fe2182c52",
-            "src/secrecy_mapper/models.py": "efa9bc767da58f8022122aff38fdd10b9a1b4c837c9819fec17dc9d4b898615d",
-            "src/secrecy_mapper/pipeline.py": "9809640b6b4571ea2a5bac194a4ee25430f736d8b02c9944c2595c0f9ca3d603",
-            "src/secrecy_mapper/validation.py": "ac8d504944051e419e9fbf48cb06ede519265d139819e166d5ddab62ef731f70",
-            "tests/test_graph.py": "28aab33a50b6045486d28049bcb3af221faf294db68cd5e63f1a919f2814e084",
-            "tests/test_pipeline.py": "33cc88d495ced4295b3ce22a0fc0b69d588da7d68117a2a6caf74386262bea7a",
-            "tests/test_validation.py": "3a40189c9adfef7957702a7c6f33d31e281b8b90cdd98bd3561136871c40b433",
-            "pyproject.toml": "dddc5da4424b95add300a47713ff503ad617ec630de7b2bf81aa16ecc2f9a54e",
-            "requirements.txt": "a6630f556dcbd0a2609a03d365ac66ecd9db721111435031981761d12638d134"
-        }
-    }
+"project": "Secrecy Mapper",
+"manifest_version": "1.0",
+"generated_at_utc": "2026-11-20T08:06:34.785162+00:00",
+"repository": {
+"tested_commit": "64eccd5fbd91e4232301e313dc0a39baf8bf8a6e",
+"branch": "main",
+"working_tree_clean_before_manifest": true
+},
+"environment": {
+"python_version": "3.13.18",
+"python_implementation": "CPython",
+"platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+"dependencies": {
+"networkx": "3.7",
+"pandas": "2.2.3",
+"pydantic": "2.14.2",
+"PyYAML": "6.0.3",
+"pytest": "8.4.2",
+"pytest-cov": "7.1.0",
+"coverage": "7.17.3",
+"ruff": "0.17.6"
+}
+},
+"verification": {
+"coverage_percent": 96.36,
+"ruff": "passed",
+"test_isolation": "passed",
+"evidence_integrity": "passed",
+"deterministic_generation": true,
+"test_results": {
+"total": 11,
+"passed": 11,
+"failed": 0,
+"errors": 0,
+"skipped": 0
+}
+},
+"hashes": {
+"synthetic_datasets": {
+"data/synthetic/entities.csv": "8c9406f589546af88f383170a2f8bcd46988d23725818aad37df71c1b25729af",
+"data/synthetic/relationships.csv": "fbe4a8c9cec7f781bfcf045929c89ac9d1f48cccb602c3211db344cc2d4b78a0"
+},
+"analytical_evidence": {
+"evidence/network/node_metrics.csv": "2cb8dabcc652c64e979b2af67d8791f2244d5652fa9e1a3f6450b98aba2c925d",
+"evidence/network/components.json": "f3547af77710910cc4e342b7974466bf12acd370fffae7d15e4e06a494522c66"
+},
+"source_files": {
+"scripts/generate.py": "d593b715ad736c683dfc696b0b5677f2f5857894d0c2d13c642e8a07e53484b4",
+"src/secrecy_mapper/graph.py": "4980a7baf3b9c50b37d2377219baf16bf73fc7426c0072a61112104bbd86108e",
+"src/secrecy_mapper/metrics.py": "368a5da0f5f85f21237260410928a9a103892297b205178326823e1fe2182c52",
+"src/secrecy_mapper/models.py": "efa9bc767da58f8022122aff38fdd10b9a1b4c837c9819fec17dc9d4b898615d",
+"src/secrecy_mapper/pipeline.py": "9809640b6b4571ea2a5bac194a4ee25430f736d8b02c9944c2595c0f9ca3d603",
+"src/secrecy_mapper/validation.py": "ac8d504944051e419e9fbf48cb06ede519265d139819e166d5ddab62ef731f70",
+"tests/test_graph.py": "28aab33a50b6045486d28049bcb3af221faf294db68cd5e63f1a919f2814e084",
+"tests/test_pipeline.py": "33cc88d495ced4295b3ce22a0fc0b69d588da7d68117a2a6caf74386262bea7a",
+"tests/test_validation.py": "3a40189c9adfef7957702a7c6f33d31e281b8b90cdd98bd3561136871c40b433",
+"pyproject.toml": "dddc5da4424b95add300a47713ff503ad617ec630de7b2bf81aa16ecc2f9a54e",
+"requirements.txt": "a6630f556dcbd0a2609a03d365ac66ecd9db721111435031981761d12638d134"
+}
+}
 }
